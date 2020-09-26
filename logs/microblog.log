@@ -1,1 +1,49 @@
 2020-09-25 21:08:25,429 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 08:13:57,402 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 08:38:30,308 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 08:38:44,825 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:02:18,432 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:15:30,119 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:17:57,667 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:19:59,328 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:22:34,246 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:26:17,733 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:26:21,187 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:26:23,619 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:42:20,923 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
+2020-09-26 09:42:25,131 ERROR: Exception on /user/john [GET] [in /home/void/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/void/microblog/app/routes.py", line 75, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/void/microblog/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/void/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/void/microblog/app/templates/base.html", line 29, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/void/microblog/app/templates/user.html", line 11, in block "content"
+    <p>{{ user.followers_count() }} followers, {{ user.followed.count() }} following.</p>
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'followers_count'
+2020-09-26 09:45:54,801 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:45]
