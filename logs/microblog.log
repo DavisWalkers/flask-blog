@@ -65,3 +65,5 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'logn'. Did you me
 2020-09-26 12:02:46,726 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:47]
 2020-09-26 12:08:37,717 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:47]
 2020-09-26 12:44:40,434 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:49]
+2020-09-26 12:47:44,452 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:49]
+2020-09-26 13:01:37,453 INFO: Microblog startup [in /home/void/microblog/app/__init__.py:51]
