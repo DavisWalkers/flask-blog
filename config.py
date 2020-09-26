@@ -14,3 +14,4 @@ class Config(object):
     ADMINS = ['test@mail.com']
     POSTS_PER_PAGE = 25
     LANGUAGES = ['en', 'ru']
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')

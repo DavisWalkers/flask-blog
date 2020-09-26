@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-26 13:32+0300\n"
+"POT-Creation-Date: 2020-09-26 17:10+0300\n"
 "PO-Revision-Date: 2020-09-26 13:34+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -31,7 +31,7 @@ msgstr "Пароль"
 msgid "Remember Me"
 msgstr "Запомнить"
 
-#: app/forms.py:12 app/templates/login.html:5
+#: app/forms.py:12 app/routes.py:80 app/templates/login.html:5
 msgid "Sign In"
 msgstr "Войти"
 
@@ -43,7 +43,7 @@ msgstr "Email"
 msgid "Repeat Password"
 msgstr "Повторите пароль"
 
-#: app/forms.py:21 app/templates/register.html:5
+#: app/forms.py:21 app/routes.py:101 app/templates/register.html:5
 msgid "Register"
 msgstr "Зарегистрироваться"
 
@@ -75,49 +75,76 @@ msgstr "Скажите что-нибудь"
 msgid "Request Password Reset"
 msgstr "Запросить сброс пароля"
 
-#: app/routes.py:21
+#: app/routes.py:36
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликован!"
 
-#: app/routes.py:43
+#: app/routes.py:45 app/templates/base.html:21
+msgid "Home"
+msgstr "Главная"
+
+#: app/routes.py:60 app/templates/base.html:22
+msgid "Explore"
+msgstr "Исследовать"
+
+#: app/routes.py:73
 msgid "Invalid username or password"
 msgstr "Неверное имя пользователя или пароль"
 
-#: app/routes.py:69
+#: app/routes.py:99
 msgid "Congratulations, you are now a registered user!"
 msgstr "Поздравляем, теперь Вы зарегистрированный пользователь!"
 
-#: app/routes.py:105
-msgid "Your changes have been saved."
-msgstr "Изменения были сохранены."
-
-#: app/routes.py:121 app/routes.py:141
-msgid "User {} not found."
-msgstr "Пользователь {} не найден."
-
-#: app/routes.py:124
-msgid "You cannot follow yourself!"
-msgstr "Вы не можете подписаться на самого себя!"
-
-#: app/routes.py:128
-msgid "You are following {}!"
-msgstr "Теперь вы подписаны на {}!"
-
-#: app/routes.py:144
-msgid "You cannot unfollow yourself!"
-msgstr "Вы не можете отписаться от самого себя!"
-
-#: app/routes.py:148
-msgid "You are not following {}."
-msgstr "Вы больше не подписаны на {}."
-
-#: app/routes.py:177
+#: app/routes.py:114
 msgid "Check your email for the instructions to reset your password"
 msgstr "Проверьте Вашу электронную почту для инструкций по сбросу Вашего пароля"
 
-#: app/routes.py:194
+#: app/routes.py:117 app/templates/reset_password_request.html:5
+msgid "Reset Password"
+msgstr "Сбросить пароль"
+
+#: app/routes.py:131
 msgid "Your password has been reset."
 msgstr "Ваш пароль был сброшен."
+
+#: app/routes.py:160
+msgid "Your changes have been saved."
+msgstr "Изменения были сохранены."
+
+#: app/routes.py:165 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr "Изменить профиль"
+
+#: app/routes.py:176 app/routes.py:196
+#, python-format
+msgid "User %(username)s not found."
+msgstr ""
+
+#: app/routes.py:179
+msgid "You cannot follow yourself!"
+msgstr "Вы не можете подписаться на самого себя!"
+
+#: app/routes.py:183
+#, python-format
+msgid "You are following %(username)s!"
+msgstr ""
+
+#: app/routes.py:199
+msgid "You cannot unfollow yourself!"
+msgstr "Вы не можете отписаться от самого себя!"
+
+#: app/routes.py:203
+#, python-format
+msgid "You are not following %(username)s."
+msgstr ""
+
+#: app/translate.py:9
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:16
+msgid "Error: the translation service failed."
+msgstr ""
 
 #: app/templates/404.html:4
 msgid "Not Found"
@@ -140,17 +167,13 @@ msgstr "Администратор был уведомлен. Простите �
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сказал(а) %(when)s"
 
+#: app/templates/_post.html:26
+msgid "Translate"
+msgstr ""
+
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
 msgstr "Добро пожаловать в Microblog"
-
-#: app/templates/base.html:21
-msgid "Home"
-msgstr "Главная"
-
-#: app/templates/base.html:22
-msgid "Explore"
-msgstr "Исследовать"
 
 #: app/templates/base.html:26
 msgid "Login"
@@ -164,9 +187,9 @@ msgstr "Профиль"
 msgid "Logout"
 msgstr "Выход"
 
-#: app/templates/edit_profile.html:5
-msgid "Edit Profile"
-msgstr "Изменить профиль"
+#: app/templates/base.html:66
+msgid "Error: Could not contact server."
+msgstr ""
 
 #: app/templates/index.html:5
 #, python-format
@@ -201,10 +224,6 @@ msgstr "Нажмите, чтобы сбросить"
 msgid "Reset Your Password"
 msgstr "Восстановить пароль"
 
-#: app/templates/reset_password_request.html:5
-msgid "Reset Password"
-msgstr "Сбросить пароль"
-
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Пользователь"
@@ -234,4 +253,13 @@ msgstr "Подписаться"
 #: app/templates/user.html:27
 msgid "Unfollow"
 msgstr "Отписаться"
+
+#~ msgid "User {} not found."
+#~ msgstr "Пользователь {} не найден."
+
+#~ msgid "You are following {}!"
+#~ msgstr "Теперь вы подписаны на {}!"
+
+#~ msgid "You are not following {}."
+#~ msgstr "Вы больше не подписаны на {}."
 
